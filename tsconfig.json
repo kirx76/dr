@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
     "lib": [
       "dom",
@@ -18,9 +19,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "src/*": ["./src/*"],
+      "stores/*": ["./src/stores/*"],
+      "routes": ["./src/routes"],
+      "routes/*": ["./src/routes/*"],
+      "components": ["./src/components"],
+      "components/*": ["./src/components/*"],
+      "navigations": ["./src/navigations"],
+      "navigations/*": ["./src/navigations/*"]
+    }
   },
   "include": [
-    "src"
+    "src/**/*ts",
+    "src/**/*tsx",
+    "src/**/*.d.ts"
   ]
 }
